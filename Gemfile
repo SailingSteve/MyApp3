@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem 'pg', '0.14.1'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -43,3 +44,9 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+
+group :production do
+#  gem 'pg', '0.14.1'  Not needed since I converted the example to pg already
+  gem 'rails_12factor', '0.0.2'
+end
